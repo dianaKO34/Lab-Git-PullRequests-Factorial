@@ -1,13 +1,11 @@
-// V1: Implementación iterativa
+// V2: Implementación recursiva
 public class Factorial {
 
     public static long calcular(int n) {
-        long resultado = 1;
-
-        for (int i = 1; i <= n; i++) {
-            resultado = resultado * i;
+        if (n <= 1) {
+            return 1;
         }
 
-        return resultado;
+        return n * calcular(n - 1);
     }
 }
